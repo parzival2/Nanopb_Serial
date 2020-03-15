@@ -4,3 +4,6 @@
 [submodule "Chibios_18.2.x"]
 	path = Chibios_18.2.x
 	url = ../ChibiOS.git
+[submodule "nanopb"]
+	path = nanopb
+	url = ../../nanopb/nanopb.git

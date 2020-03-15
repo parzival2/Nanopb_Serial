@@ -1,0 +1,7 @@
+syntax="proto2";
+
+message PidParam {
+    required float p = 1;
+    required float i = 2;
+    required float d = 3;
+}

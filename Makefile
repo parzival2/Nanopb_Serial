@@ -83,7 +83,7 @@ endif
 #
 
 # Define project name here
-PROJECT = DC_Motor_Control
+PROJECT = Nanopb_Serial
 
 # Imported source files and paths
 CHIBIOS = $(PWD)/Chibios_18.2.x
@@ -107,6 +107,7 @@ include $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC/mk/port_v7m.mk
 #include $(CHIBIOS)/test/oslib/oslib_test.mk
 include $(CHIBIOS)/os/hal/lib/streams/streams.mk
 include $(CHIBIOS)/os/various/cpp_wrappers/chcpp.mk
+include $(PWD)/nanopb_include.mk
 
 # Define linker script file here
 LDSCRIPT= $(STARTUPLD)/STM32F103xB.ld
@@ -217,3 +218,6 @@ ULIBS =
 
 RULESPATH = $(CHIBIOS)/os/common/startup/ARMCMx/compilers/GCC
 include $(RULESPATH)/rules.mk
+
+# NANOPB_RULESPATH = $(PWD)/nanopb_build.mk
+include $(PWD)/nanopb_build.mk

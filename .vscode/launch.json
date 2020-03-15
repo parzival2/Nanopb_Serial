@@ -6,7 +6,7 @@
     "configurations": [
         {
             "cwd": "${workspaceRoot}",
-            "executable": "./build/DC_Motor_Control.elf",
+            "executable": "./build/Nanopb_Serial.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
