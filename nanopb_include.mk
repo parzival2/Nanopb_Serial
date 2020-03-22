@@ -4,8 +4,8 @@ NANOPB_CORE_SRC = 	$(NANOPBDIR)/pb_encode.c \
 			  		$(NANOPBDIR)/pb_decode.c \
 			  		$(NANOPBDIR)/pb_common.c
 NANOPB_CORE_INC = $(NANOPBDIR)
-NANOPB_GEN_SRC = $(GENOUTDIR)/PidParam.pb.c
 NANOPB_GEN_INC = $(GENOUTDIR)
+NANOPB_GEN_SRC = $(GENOUTDIR)/messages.pb.c
 
 ALLCSRC += $(NANOPB_CORE_SRC)
 ALLCSRC += $(NANOPB_GEN_SRC)

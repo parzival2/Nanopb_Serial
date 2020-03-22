@@ -2,5 +2,6 @@
     "files.associations": {
         "*.sdf": "xml",
         "hal.h": "c"
-    }
+    },
+    "python.pythonPath": "/usr/bin/python3"
 }

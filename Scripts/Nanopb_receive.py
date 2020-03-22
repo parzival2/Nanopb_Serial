@@ -1,8 +1,10 @@
 from PyQt5.QtSerialPort import QSerialPort, QSerialPortInfo
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtCore import QIODevice
-from Gen import PidParam_pb2
 from google.protobuf.message import DecodeError
+from google.protobuf import message
+from google.protobuf.descriptor_pb2 import MessageOptions
+from Gen import messages_pb2
 
 class SerialProtoParser(QWidget):
     def __init__(self):
@@ -36,13 +38,16 @@ class SerialProtoParser(QWidget):
 
     def __onSerialPortReadyRead(self):
         bytesRead = self.__serialPort.readAll()
-        try:
-            message = PidParam_pb2.PidParam()
-            message.ParseFromString(bytesRead)
-            print(message)
-        except DecodeError:
-            print("Error in decoding")
-
+        msg = messages_pb2.Message1()
+        # print(msg.DESCRIPTOR.fields[0].number)
+        if(ord(bytesRead[0])) is msg.DESCRIPTOR.fields[0].number:
+            msg.ParseFromString(bytesRead[1:])
+            print(msg)
+        # print('-----------')
+        # msg2 = messages_pb2.Message2()
+        # msg2.ParseFromString(bytesRead)
+        # print(msg2)
+        # print('++++++++++++')
     def closeEvent(self, event) -> None:
         # On close, close the serial connection
         print("Closing serial port")

@@ -1,6 +1,6 @@
 PROTODIR = $(PWD)
 GENOUTDIR = $(PWD)/Gen
-PROTOFILES = $(PROTODIR)/PidParam.proto
+PROTOFILES = $(PROTODIR)/messages.proto
 
 all:
 	protoc --plugin=protoc-gen-nanopb=nanopb/generator/protoc-gen-nanopb \

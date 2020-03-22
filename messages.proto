@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message Message1
+{
+    uint64 messageid=100;
+    int32 intvalue = 2;
+}
+
+message Message2
+{
+    uint64 messageid=101;
+    int32 intvalue = 1;
+    string strvalue = 2;
+}
+
+message Message3
+{
+    uint64 messageid=102;
+    bool boolvalue = 2;
+}
