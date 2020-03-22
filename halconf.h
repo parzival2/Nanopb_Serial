@@ -411,7 +411,7 @@
 #if !defined(USB_USE_WAIT) || defined(__DOXYGEN__)
 #define USB_USE_WAIT                FALSE
 #endif
-#include "halconf_community.h"
+// #include "halconf_community.h"
 #endif /* HALCONF_H */
 
 /** @} */
