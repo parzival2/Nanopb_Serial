@@ -14,10 +14,11 @@ class LedBlinkerThread : public chibios_rt::BaseStaticThread<256>
 	void main(void) override
 	{
 		this->setName(mThreadName);
+
 		while(TRUE)
 		{
 			palTogglePad(GPIOC, GPIOC_LED);
-			chThdSleepMilliseconds(1000);
+			chThdSleepMilliseconds(200);
 		}
 	}
 

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+enum MessageID
+{
+    Message1ID = 0;
+    Message2ID = 1;
+    Message3ID = 2;
+}
+
+
+message Message1
+{
+    MessageID id = 1;
+    int32 intvalue = 2;
+}
+
+message Message2
+{
+    MessageID id = 1;
+    int32 intvalue = 2;
+    string strvalue = 3;
+}
+
+message Message3
+{
+    MessageID id=1;
+    bool boolvalue = 2;
+}
